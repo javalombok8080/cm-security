@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: 27072024_insert
+      author: alimardan
+      changes:
+        - sql:
+            sql:
+              insert into cm.users(username, password, email, role)
+              values ('admin', 'admin123', 'admin@gmail.com', 'ADMIN')

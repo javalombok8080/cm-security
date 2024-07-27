@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: 27072024
+      author: alimardan
+      changes:
+        - createTable:
+            tableName: users
+            catalogName: cm
+            columns:
+              -  column:
+                   name: user_id
+                   type: bigint
+                   autoIncrement: true
+                   constraints:
+                     primaryKey: true
+                     nullable: false
+              - column:
+                  name: username
+                  type: varchar(20)
+              - column:
+                  name: password
+                  type: varchar(20)
+              - column:
+                  name: email
+                  type: varchar(20)
+              - column:
+                  name: role
+                  type: varchar(20)
+              - column:
+                  name: created_at
+                  type: timestamp
+                  defaultValueComputed: 'CURRENT_TIMESTAMP'

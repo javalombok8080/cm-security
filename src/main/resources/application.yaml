@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/cm
+    username: root
+    password: Alimardan012
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  liquibase:
+    enabled: true
+    database-change-log-lock-table: DATABASECHANGELOGLOCK
+    database-change-log-table: DATABASECHANGELOG
+    change-log: 'classpath:db/changelog/db.changelog-master.yaml'
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-exception: true
+    include-stacktrace: never
+
+
+
+jwt:
+  signing:
+    key: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC7dqgO8deqQgCYPQwx/QICV7wn1whg4oty6a6++8vfs4KGgwSHa9Y7cd3mKeAN6wY2BD9hDSFdFkUEFVsLdMr/B3tCXw989E1F2j525Gy5718slItkznGOZBBMZbe1iqfr3vW5aWCO2hhfxyBFniTN0yngoDuv7j6qP4Ov1mykwwIDAQAB
