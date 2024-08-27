@@ -10,16 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 public class UserController {
 
-    @GetMapping("/user")
+    @GetMapping("/teacher")
     public String getUser(){
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        return "Hello user" + authentication.getName();
+        return "Hello user";
     }
 
     @GetMapping("/admin")
     public String getAmin(){
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        return "Hello admin" + authentication.getName();
+        return "Hello admin";
     }
 }
 

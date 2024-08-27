@@ -41,7 +41,7 @@ public class SecurityConfiguration {
                 }))
                 .authorizeHttpRequests(request -> request
                         .requestMatchers("/auth/**").permitAll()
-                        .requestMatchers("/test/user").hasAuthority("USER")
+                        .requestMatchers("/test/teacher").hasAnyAuthority("ADMIN", "TEACHER")
                         .requestMatchers("/test/admin").hasAuthority("ADMIN")
                         .anyRequest().authenticated())
                 .sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

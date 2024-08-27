@@ -19,7 +19,7 @@ databaseChangeLog:
                   type: varchar(20)
               - column:
                   name: password
-                  type: varchar(20)
+                  type: varchar(255)
               - column:
                   name: email
                   type: varchar(20)
